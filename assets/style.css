@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #232323;
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    background-color: #373b69;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+#search {
+    background-color: transparent;
+    border: 2px ridge #22254b;
+    border-radius: 50px;
+    color: #fff;
+    font-family: inherit;
+    font: 1rem;
+    padding: 0.5rem 1rem;
+    transition: background-color .3s ease-in-out;
+}
+
+#search::placeholder{
+    color: #7378c5;
+}
+
+#search:focus {
+    background-color: #22254b;
+    outline: none;
+}
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.movie {
+    width: 300px;
+    position: relative;
+    margin: 1rem;
+    overflow: hidden;
+    background-color: #373b69;
+    border-radius: 3px;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+}
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    display: flex;
+    justify-content: space-between;
+    color: #eee;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+    margin: 0;
+}
+
+.movie-info span {
+    background-color: #22254b;
+    height: 100%;
+    border: 3px;
+    padding: 0.25rem 0.5rem;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.movie-info span.green {
+    color: rgb(39, 189, 39);
+}
+
+.movie-info span.blue {
+    color: cyan;
+}
+
+.movie-info span.red {
+    color: rgb(189, 42, 42);
+}
+
+.overview {
+    background-color: #ddd;
+    padding: 2rem;
+    padding-top: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(100%);
+    transition: transform .3s ease-in;
+    height: 7rem;
+}
+
+.overview h3 {
+    margin-bottom: 7px;
+}
+
+/* .overview button {
+    position: absolute;
+    top: 81%;
+    right: 10%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: red;
+} */
+
+.movie:hover .overview {
+    transform: translateY(0);
+}
